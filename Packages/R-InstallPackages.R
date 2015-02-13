@@ -123,20 +123,20 @@ install.packages(packages)
 ###########################################################
 # Installer for the UScensus2010tract package
 # http://artax.karlin.mff.cuni.cz/r-help/library/UScensus2010/html/install.tract.html
-
-R
-library(UScensus2010)
-
+#
+#R
+#library(UScensus2010)
+#
 # install.tract("windows")  # did not work 2014-10-10
-
+#
 # http://lakshmi.calit2.uci.edu/census2000/R/src/contrib/
-install.packages("UScensus2010tract",
-                 repos = "http://lakshmi.calit2.uci.edu/census2000/R/",
-                 type = "source")
-install.packages("UScensus2010county",
-                 repos = "http://lakshmi.calit2.uci.edu/census2000/R/",
-                 type = "source")
-
+#install.packages("UScensus2010tract",
+#                 repos = "http://lakshmi.calit2.uci.edu/census2000/R/",
+#                 type = "source")
+#install.packages("UScensus2010county",
+#                 repos = "http://lakshmi.calit2.uci.edu/census2000/R/",
+#                 type = "source")
+#
 # blk and blkgrp files are quite large
 
 ###########################################################

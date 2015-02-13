@@ -1,0 +1,101 @@
+# Python virtual environments
+sudo yum install python-pip                      # pip installer
+sudo pip install virtualenvwrapper               # virtual environments
+sudo pip install virtualenv
+
+# Use /opt to store various versions of Python and virtual envirnments?
+# For example:
+#/opt/python/python278
+#/opt/python/python342
+
+cd /opt
+sudo mkdir virtualenv
+sudo chown efg virtualenv   # more general permissions?
+source `which virtualenvwrapper.sh`
+export WORKON_HOME=/opt/virtualenv
+
+##########################################################################
+# Python 2.7+ compilation
+sudo mkdir -p python/python278
+sudo chown -R efg python    # more general permissions?
+
+cd ~/Software               # some work directory
+wget http://www.python.org/ftp/python/2.7.8/Python-2.7.8.tar.xz
+xz -d Python-2.7.8.tar.xz
+tar -xvf Python-2.7.8.tar
+cd Python-2.7.8
+./configure --enable-shared --prefix=/opt/python/python278
+make
+make altinstall
+/opt/python/python278/bin/python2.7 --version   # test version
+
+# Python 2.7+ virtual environment
+virtualenv --python=/opt/python/python278/bin/python2.7 Python278
+
+# test virtual environment
+workon
+workon Python278
+python --version
+deactivate
+
+##########################################################################
+# Python 3.4+ compilation
+
+cd /opt
+sudo mkdir -p python/python342
+cd ~/Software             # some work directory
+wget http://www.python.org/ftp/python/3.4.2/Python-3.4.2.tar.xz
+xz -d Python-3.4.2.tar.xz
+tar -xvf Python-3.4.2.tar
+cd Python-3.4.2
+./configure --prefix=/opt/python/python342
+make
+make altinstall
+/opt/python/python342/bin/python3.4 --version    # test version
+
+# Python 3.4+ virtual environment
+virtualenv --python=/opt/python/python342/bin/python3.4 Python342
+
+# test virtual environment
+workon
+workon Python342
+python --version
+deactivate
+
+Might consider modifying path, e.g., export PATH="/opt/python/bin:$PATH"
+
+##########################################################################
+# Install the following into both Python278 and Python342
+workon Python278    or
+workon Python342
+
+pip install numpy
+pip install scipy
+pip install sympy
+pip install matplotlib
+pip install ipython     # requires Python 2.7 or 3.3 or higher
+pip install ipython[all]
+
+pip install pandas
+pip install nose
+pip install argparse
+
+pip install Pillow         # maintained version of PIL (Python Imaging Library)
+pip install scikit-learn   # Machine learning  http://scikit-learn.org/stable/install.html
+
+pip install lxml
+pip install pyyaml
+
+pip install mysql-python
+
+pip freeze > requirements.txt   # record list of packages installed
+
+##########################################################################
+# Using virtualenv requires this in .bashrc
+
+# virtualenvwrapper
+export WORKON_HOME=/opt/virtualenv
+source `which virtualenvwrapper.sh`
+
+##########################################################################
+

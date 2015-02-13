@@ -1,0 +1,34 @@
+# Add EPEL Repo
+wget http://mirror-fpt-telecom.fpt.net/fedora/epel/6/i386/epel-release-6-8.noarch.rpm
+sudo rpm -ivh epel-release-6-8.noarch.rpm
+
+# CentOS groups
+sudo yum groupinstall "Development Tools"
+sudo yum groupinstall "Additional Development"
+
+sudo yum install gcc gcc-c++ make openssl-devel  # redundant with other dev tools?
+sudo yum install libxml2 libxml2-devel libxslt libxslt-devel  # XML
+sudo yum install libyaml libyaml-devel                        # YAML
+
+# Internet / Web
+sudo yum install httpd-devel                     # Apache server
+sudo yum install filezilla                       # FTP client
+
+# Linux System
+sudo yum install libX11-devel libXt-devel libXaw-devel     # X Windows
+
+# Mathematics/Statistics/Computations
+sudo yum install atlas blas blas-devel           # Basic Linear Algebra Subprograms
+sudo yum install lapack lapack-devel             # linear algebra package libraries
+sudo yum install fftw-static fftw-devel          # Fast Fourier Transforms
+sudo yum install libsvm                          # Support Vector Machine library
+
+# Image viewing/conversions
+sudo yum install gv                              # ghostview/ghostscript
+sudo yum install ImageMagick ImageMagick-devel   # Image conversion
+sudo yum install libtiff-devel                   # Tiff files
+sudo yum install pandoc                          # IPython notebooks; R knitr
+
+# Miscellaneous
+sudo yum install tree                   # directory tree
+sudo yum install unix2dos dos2unix      # line end conversions

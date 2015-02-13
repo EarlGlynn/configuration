@@ -1,0 +1,11 @@
+https://github.com/wnd-charm/wnd-charm
+Download zip
+
+[129 efg localhost 2015-02-04 21:08:43 /home/efg/Software/wnd-charm-master]
+./configure
+
+[130 efg localhost 2015-02-04 21:10:03 /home/efg/Software/wnd-charm-master]
+make
+
+[131 efg localhost 2015-02-04 21:10:48 /home/efg/Software/wnd-charm-master]
+sudo make install
