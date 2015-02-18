@@ -23,6 +23,25 @@ sudo yum install lapack lapack-devel             # linear algebra package librar
 sudo yum install fftw-static fftw-devel          # Fast Fourier Transforms
 sudo yum install libsvm                          # Support Vector Machine library
 
+# R
+sudo yum install R
+
+# RStudio + pandoc + TeXLive 2014  (for knitr to create PDFs)
+wget http://download1.rstudio.org/rstudio-0.98.1102-x86_64.rpm
+sudo rpm -i rstudio-0.98.1102-x86_64.rpm
+
+sudo yum install texlive*
+
+# http://stackoverflow.com/questions/25148055/rstudio-server-on-rhel-6-5-pandoc-error-ifluatex-sty-not-found
+wget http://www.ctan.org/tex-archive/macros/latex/contrib/oberdiek/ifluatex.dtx
+tex ifluatex.dtx
+sudo cp ifluatex.sty /usr/share/texmf/tex/generic/oberdiek/.
+
+wget http://mirrors.ctan.org/macros/latex/contrib/framed.zip
+unzip framed.zip
+sudo cp -R framed/ /usr/share/texmf/tex/latex/.
+sudo texhash
+
 # Image viewing/conversions
 sudo yum install gv                              # ghostview/ghostscript
 sudo yum install ImageMagick ImageMagick-devel   # Image conversion
@@ -32,3 +51,5 @@ sudo yum install pandoc                          # IPython notebooks; R knitr
 # Miscellaneous
 sudo yum install tree                   # directory tree
 sudo yum install unix2dos dos2unix      # line end conversions
+
+
