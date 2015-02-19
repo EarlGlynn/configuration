@@ -48,8 +48,10 @@ sudo yum install ImageMagick ImageMagick-devel   # Image conversion
 sudo yum install libtiff-devel                   # Tiff files
 sudo yum install pandoc                          # IPython notebooks; R knitr
 
+# LibreOffice
+sudo yum install libreoffice
+
 # Miscellaneous
 sudo yum install tree                   # directory tree
 sudo yum install unix2dos dos2unix      # line end conversions
-
 
