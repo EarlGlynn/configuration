@@ -104,8 +104,8 @@ packages <- c(
   "tseriesChaos",
   "twitteR",
   "UsingR",
-  "UScensus2000blkgrp",
-  "UScensus2000cdp",
+  # "UScensus2000blkgrp",
+  # "UScensus2000cdp",
   # "UScensus2000tract",  # http://www.jstatsoft.org/v37/i06/
   "UScensus2010",
   "VennDiagram",
