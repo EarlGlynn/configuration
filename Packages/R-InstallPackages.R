@@ -1,6 +1,3 @@
-# Also see:
-# http://www.r-bloggers.com/r-3-1-3-2-upgrade-notes/
-
 # efg, Jan 2015
 
 packages <- c(
