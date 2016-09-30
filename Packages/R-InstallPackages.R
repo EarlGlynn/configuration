@@ -52,7 +52,6 @@ packages <- c(
   "latticeExtra",
   "lava",
   "magrittr",
-  # "manipulate",   # out in 3.1.2
   "maps",
   "markdown",
   "Matrix",
@@ -74,11 +73,10 @@ packages <- c(
   "R.oo",
   "R.utils",          # bunzip2
   "randomForest",
-  # "rCharts",        # out in 3.1.2
   "RColorBrewer",
   "Rcpp",
   "RCurl",
-  # "RecordLinkage",  # out in 3.1.2
+  "readxl",
   "reshape2",
   "rgl",
   "rJava",
@@ -88,7 +86,6 @@ packages <- c(
   "rmarkdown",
   "rpart.plot",
   "RSQLite",
-  # "RSQLite.extfuns",   # out in 3.1.2
   "scales",
   "scatterplot3d",
   "shiny",
