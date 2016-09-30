@@ -145,10 +145,9 @@ source("http://bioconductor.org/biocLite.R")
 biocLite()
 # AnnottionDBiBiobase, BiocGenerics, BiocInstaller, EBImage, GenomeInfoDb, IRanges
 
-bio.packages <- c(
+bio.packages <-  c(
   "EBImage",
-  "rhdf5",
-  "zlibboc")
+  "rhdf5")
 biocLite(bio.packages)
 
 ###########################################################
