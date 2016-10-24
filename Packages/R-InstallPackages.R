@@ -37,6 +37,7 @@ packages <- c(
   "gplots",
   "gtable",
   "gtools",
+  "hexView",            # view binary files in hex
   "highr",
   "Hmisc",
   "httr",
@@ -71,9 +72,10 @@ packages <- c(
   "qdap",
   "R.methodsS3",
   "R.oo",
-  "R.utils",          # bunzip2
+  "R.utils",            # bunzip2
+  "RecordLinkage",      # levenshteinDist
   "randomForest",
-  "RColorBrewer",
+  "RColorBrewer",       # color palettes
   "Rcpp",
   "RCurl",
   "readxl",
